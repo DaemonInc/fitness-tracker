@@ -1,1 +1,12 @@
-{}
+{
+  "workout": {
+    "list": {
+      "title": "Trainingen",
+      "description": "Bekijk je trainingen in de fitness tracker."
+    },
+    "create": {
+      "title": "Maak een training",
+      "description": "Maak een nieuwe training in uw fitness tracker."
+    }
+  }
+}

@@ -1,1 +1,19 @@
-{}
+{
+  "workout": {
+    "list": {
+      "title": "Workouts",
+      "description": "View your workouts in the fitness tracker."
+    },
+    "create": {
+      "title": "Create Workout",
+      "description": "Create a new workout in your fitness tracker.",
+      "form": {
+        "name": "Workout name",
+        "exercises": "Exercises"
+      }
+    }
+  },
+  "buttons": {
+    "submit": "Submit"
+  }
+}
