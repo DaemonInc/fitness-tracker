@@ -23,6 +23,8 @@ export default defineNuxtConfig({
     },
   },
 
+  tailwindcss: {},
+
   image: {
     screens: {
       xs: 320,
