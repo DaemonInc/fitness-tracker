@@ -23,7 +23,9 @@ export default defineNuxtConfig({
     },
   },
 
-  tailwindcss: {},
+  css: ["~/assets/css/main.css"],
+
+  ui: {},
 
   image: {
     screens: {
@@ -53,5 +55,5 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/i18n"],
+  modules: ["@nuxt/image", "@nuxtjs/i18n", "@nuxt/ui"],
 });
