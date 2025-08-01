@@ -2,10 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+
   typescript: {
     strict: true,
     typeCheck: true,
   },
+
   app: {
     head: {
       htmlAttrs: {
@@ -20,4 +22,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  modules: ["@nuxtjs/tailwindcss"],
 });
