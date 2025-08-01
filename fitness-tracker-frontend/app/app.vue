@@ -1,8 +1,9 @@
 <template>
   <div>
     <UApp :locale="locales[locale]">
-      <NuxtRouteAnnouncer />
-      <NuxtWelcome />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </UApp>
   </div>
 </template>
