@@ -1,23 +1,17 @@
 <template>
   <div class="row">
     <UInputNumber
-      class="w-24"
-      :controls="false"
+      class="w-2/5"
       :min="0"
       :step="1"
       v-model="minutes"
-      :decrement-disabled="true"
       :format-options="{
         maximumFractionDigits: 0,
       }"
-    >
-      <template #increment><div /></template>
-      <template #decrement><div /></template>
-    </UInputNumber>
+    />
     <span class="px-1">:</span>
     <UInputNumber
-      class="w-24"
-      :controls="false"
+      class="w-2/5 mr-1"
       :min="0"
       :step="1"
       v-model="seconds"
@@ -25,10 +19,7 @@
         minimumIntegerDigits: 2,
         maximumFractionDigits: 0,
       }"
-    >
-      <template #increment><div /></template>
-      <template #decrement><div /></template
-    ></UInputNumber>
+    />
     {{ label }}
   </div>
 </template>
@@ -57,3 +48,9 @@ const seconds = computed({
   },
 });
 </script>
+
+<style scoped>
+::-webkit-inner-spin-button {
+  appearance: none;
+}
+</style>
