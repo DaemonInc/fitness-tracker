@@ -42,7 +42,6 @@ const minutes = computed({
 const seconds = computed({
   get: () => (model.value ?? 0) % 60,
   set: (value: number) => {
-    console.log("Setting seconds:", value);
     const currentMinutes = Math.floor((model.value ?? 0) / 60);
     model.value = currentMinutes * 60 + value;
   },

@@ -7,7 +7,12 @@
     <UFormField :label="$t('workout.create.form.exercises')" name="exercises">
       <ExerciseSelector v-model="state.exercises" />
     </UFormField>
-    <UButton type="submit" :label="$t('buttons.submit')" @click="console.log('submit')" />
+    <UButton
+      type="submit"
+      loading-auto
+      :label="$t('buttons.submit')"
+      @click="console.log('submit')"
+    />
   </UForm>
 </template>
 
@@ -46,17 +51,24 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     if (data.success && data.data) {
       // TODO Create API request
       console.debug("Submitting workout create data:", data.data);
-    } else {
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       toast.add({
-        title: "Unable to create workout",
-        description: "Something went wrong while creating the workout",
-        icon: "i-lucide-alert-triangle",
-        color: "error",
+        title: $t('workout.form.workout_created_title'),
+        description: $t('workout.form.workout_created_description'),
+        icon: "i-lucide-check-circle",
+        color: "success",
       });
+      useRouter().replace("/workout");
+      return;
     }
-  } else {
-    console.error("Form validation failed");
   }
+
+  toast.add({
+    title: $t("errors.create_workout_title"),
+    description: $t("errors.create_workout_description"),
+    icon: "i-lucide-alert-triangle",
+    color: "error",
+  });
 }
 
 useHead({

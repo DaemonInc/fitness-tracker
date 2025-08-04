@@ -7,8 +7,8 @@ const WorkoutExerciseSchema = z.object({
 });
 
 export const WorkoutCreateSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  exercises: z.array(WorkoutExerciseSchema).nonempty("At least one exercise is required"),
+  name: z.string().min(1),
+  exercises: z.array(WorkoutExerciseSchema).nonempty(),
 });
 
 export type WorkoutCreate = z.infer<typeof WorkoutCreateSchema>;

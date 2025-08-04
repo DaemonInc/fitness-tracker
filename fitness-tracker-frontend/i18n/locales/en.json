@@ -11,9 +11,17 @@
         "name": "Workout name",
         "exercises": "Exercises"
       }
+    },
+    "form": {
+      "workout_created_title": "Workout created successfully",
+      "workout_created_description": "Your workout has been created and added to your list"
     }
   },
   "buttons": {
     "submit": "Submit"
+  },
+  "errors": {
+    "create_workout_description": "Something went wrong while creating the workout",
+    "create_workout_title": "Unable to create workout"
   }
 }
