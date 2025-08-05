@@ -58,7 +58,8 @@ paths:
         required: true
         content:
           application/json:
-            $ref: "#/components/schemas/CreateWorkout"
+            schema:
+              $ref: "#/components/schemas/CreateWorkout"
       responses:
         201:
           description: Workout created successfully

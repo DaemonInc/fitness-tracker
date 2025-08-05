@@ -9,8 +9,10 @@ dist
 # Node dependencies
 node_modules
 
-# Rust dependencies
+# Rust
 target
+**/*.rs.bk
+Cargo.lock
 
 # Logs
 logs
